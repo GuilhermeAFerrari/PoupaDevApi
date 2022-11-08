@@ -15,3 +15,14 @@ Development of a complete financial objective management REST API.
 - Registration, Listing, Financial Purpose Details
 - Withdrawal and Deposit of Financial Purpose
 - Automatic Yield
+
+## Tool Entity Framework Core (migrations)
+```
+dotnet tool install --global dotnet-ef
+```
+
+## Migrations
+```
+dotnet ef migrations add InitialMigration -o Persistence/Migrations
+dotnet ef database update
+```
