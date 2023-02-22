@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PoupaDev.API.Jobs;
+using PoupaDev.API.Middlewares;
 using PoupaDev.API.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMiddleware<ErrorMiddleware>();
 
 app.MapControllers();
 
